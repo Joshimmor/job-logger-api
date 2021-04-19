@@ -40,8 +40,7 @@ public class UserServiceImpl implements UserService {
         System.out.println(department);
         System.out.println( lastName);
         System.out.println( email);
-        User userId = userRepository.create(firstName, department, lastName, email, password);
-        Integer finding = userId.getUserId();
-        return userRepository.findById(finding);
+        Integer userId = userRepository.create(firstName, department, lastName, email, password);
+        return userRepository.findById(userId);
     }
 }
